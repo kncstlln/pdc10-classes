@@ -1,0 +1,52 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>59</y><w>210</w><h>240</h></coordinates><panel_attributes>Class
+--
+#id: int
+#name:VarChar
+#description:VarChar
+#classCode:VarChar
+--
++createClass(name,desc,code)
++update(name,desc,code)
++remove
++assignTeacher(Teacher)
++getName()
++getDesc()
++getCode()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>349</y><w>210</w><h>190</h></coordinates><panel_attributes>Teacher
+--
+#id: int
+#name: Varchar
+--
++createTeacher(name,id)
++update(name,id)
++remove()
++assignStudent(Student)
++getId()
++getName()
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>79</y><w>210</w><h>190</h></coordinates><panel_attributes>Student
+--
+#id: int
+#name: Varchar
+
+--
++addStudent(name,id)
++updateStudent(name,id)
++removeStudent()
++assignClassRoster(Class Roster)
++getId()
++getName()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>359</y><w>210</w><h>190</h></coordinates><panel_attributes>Class Roster
+--
+#id: int
+#name: varChar
+--
++updateClassRoster(id, name)
++removeClassRoster()
++getid()
++getName()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>279</y><w>290</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>270;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>259</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>289</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>
