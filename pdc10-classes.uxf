@@ -1,9 +1,10 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>59</y><w>210</w><h>240</h></coordinates><panel_attributes>Class
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>49</y><w>210</w><h>240</h></coordinates><panel_attributes>Classes
 --
 #id: int
-#name:VarChar
-#description:VarChar
+#className:VarChar
+#descr:VarChar
 #classCode:VarChar
+#teacher_id:int
 --
 +createClass(name,desc,code)
 +update(name,desc,code)
@@ -12,12 +13,16 @@
 +getName()
 +getDesc()
 +getCode()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>349</y><w>210</w><h>190</h></coordinates><panel_attributes>Teacher
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>339</y><w>210</w><h>230</h></coordinates><panel_attributes>Teacher
 --
 #id: int
-#name: Varchar
+#first_name: Varchar
+#last_name: Varchar
+#email: Varchar
+#contact: int
+#employee_number: int
 --
-+createTeacher(name,id)
++createTeacher(first_name, last_name, email, contact, employee_number)
 +update(name,id)
 +remove()
 +assignStudent(Student)
@@ -26,27 +31,32 @@
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>79</y><w>210</w><h>190</h></coordinates><panel_attributes>Student
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>39</y><w>210</w><h>240</h></coordinates><panel_attributes>Student
 --
 #id: int
-#name: Varchar
-
+#first_name: Varchar
+#last_name: Varchar
+#email: Varchar
+#student_number: int
+#contact: int
+#program: Varchar
 --
-+addStudent(name,id)
-+updateStudent(name,id)
++addStudent(first_name, last_name, email, student_number, contact, program)
++updateStudent(first_name, last_name, email, student_number, contact, program)
 +removeStudent()
 +assignClassRoster(Class Roster)
 +getId()
 +getName()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>359</y><w>210</w><h>190</h></coordinates><panel_attributes>Class Roster
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>349</y><w>210</w><h>190</h></coordinates><panel_attributes>Class Roster
 --
-#id: int
-#name: varChar
+#class_code: int
+#student_number: Varchar
+#enrolled_at: DateTime
 --
-+updateClassRoster(id, name)
++updateClassRoster(class_code, student_number, enrolled_at)
 +removeClassRoster()
-+getid()
-+getName()
++getclassCode()
++getstudentNumber()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>279</y><w>290</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>270;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>259</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>289</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>269</y><w>290</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>270;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>269</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>279</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>
